@@ -8,6 +8,20 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="text/babel">
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+
+      function tick() {
+        const element = (
+          <div>
+            <h1>Hello, world!</h1>
+            <h2>现在是 {new Date().toLocaleTimeString()}.</h2>
+          </div>
+        );
+        root.render(element);
+      }
+
+      setInterval(tick, 1000);
+    </script>
   </body>
 </html>
